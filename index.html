@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Exercice 1</title>
+    <script src="jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <input type="button" name="button" id="size" value="size"></button>
+    <input type="button" name="button" id="green" value="green"></button>
+    <input type="button" name="button" id="resetColor" value="reset color"></button>
+    <input type="button" name="button" id="hide" value="hide"></button>
+    <input type="button" name="button" id="show" value="show"></button>
+    <div id="rectangle"></div>
+  </body>
+  <script>
+  $('#size').click(function() {
+  var height = parseInt($('#rectangle').css('height')) + 10;
+  height = (height > 100) ? 10 : height;
+  $('#rectangle').css('height', height + 'px');
+  });
+  $('#green').click(function(){
+    $('#rectangle').css('background-color', 'green');
+  });
+  $('#resetColor').click(function() {
+  $('#rectangle').css('background-color', 'white');
+});
+$('#hide').click(function() {
+  $('#rectangle').hide();
+});
+$('#show').click(function() {
+  $('#rectangle').show();
+});
+
+  </script>
+</html>
