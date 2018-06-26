@@ -16,19 +16,24 @@
   </body>
   <script>
   $('#size').click(function() {
+    // déclaration de height , puis ajout de 10px et condition , si height supérieur a 100px le remettre a 10px
   var height = parseInt($('#rectangle').css('height')) + 10;
   height = (height > 100) ? 10 : height;
   $('#rectangle').css('height', height + 'px');
   });
+  // rectangle couleur vert
   $('#green').click(function(){
     $('#rectangle').css('background-color', 'green');
   });
+  // reset la color du rectangle
   $('#resetColor').click(function() {
   $('#rectangle').css('background-color', 'white');
 });
+// cache le rectangle
 $('#hide').click(function() {
   $('#rectangle').hide();
 });
+// montre le rectngle
 $('#show').click(function() {
   $('#rectangle').show();
 });
